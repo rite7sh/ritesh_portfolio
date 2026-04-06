@@ -15,21 +15,23 @@ const notes = [
 
 export const Thoughts = () => {
   return (
-    <section className="section-padding bg-background">
-      <div className="section-container">
-        <p className="section-label">Notes & Thoughts</p>
+    <section className="py-20 px-4 sm:px-6 lg:px-8 bg-muted/30">
+      <div className="max-w-4xl mx-auto">
+        <h2 className="text-3xl sm:text-4xl font-bold mb-12 text-center bg-gradient-primary bg-clip-text text-transparent">
+          Notes & Thoughts
+        </h2>
         
-        <div className="space-y-6">
+        <div className="space-y-8">
           {notes.map((note, i) => (
             <div
               key={i}
               className="animate-fade-in-up"
-              style={{ animationDelay: `${i * 0.08}s` }}
+              style={{ animationDelay: `${i * 0.1}s` }}
             >
-              <p className="text-foreground/90 leading-relaxed italic">
+              <p className="text-lg text-foreground/90 leading-relaxed italic">
                 "{note.text}"
               </p>
-              <span className="mono text-xs text-muted-foreground mt-2 inline-block">
+              <span className="text-xs text-primary mt-2 inline-block font-medium uppercase tracking-wide">
                 — {note.tag}
               </span>
             </div>
